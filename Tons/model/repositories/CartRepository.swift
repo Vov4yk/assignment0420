@@ -97,7 +97,11 @@ class CartRepository: Repository {
             storage.set(cart)
             NotificationCenter.default.post(name: .cartUpdated, object: nil)
         case .failure(let error):
-            NotificationCenter.default.post(name: .cartLoadingFail, object: nil, userInfo: ["error": error])
+            if let _ = error as? DecodingError {
+                NotificationCenter.default.post(name: .cartUpdated, object: nil)
+            } else {
+                NotificationCenter.default.post(name: .cartLoadingFail, object: nil, userInfo: ["error": error])
+            }
         }
     }
 }
