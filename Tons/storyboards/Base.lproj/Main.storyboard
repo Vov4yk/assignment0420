@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RsR-Qy-2XS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="HUj-il-To6">
+            <objects>
+                <tabBarController id="RsR-Qy-2XS" customClass="MainViewController" customModule="Tons" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JQa-EI-pQw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OMP-dS-gNj" kind="relationship" relationship="viewControllers" id="tsl-48-FgR"/>
+                        <segue destination="LyP-N8-CJM" kind="relationship" relationship="viewControllers" id="3dn-Cd-NtP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsU-xz-SGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="214"/>
+        </scene>
+        <!--Shopping-->
+        <scene sceneID="LdB-UM-f2Z">
+            <objects>
+                <navigationController id="OMP-dS-gNj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shopping" image="shoppingIcon.png" id="x1m-Dv-hBv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B1b-tF-YbL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CHK-Nr-WDE" kind="relationship" relationship="rootViewController" id="c6r-ij-hxz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mp-Ug-Adu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="-101"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="twj-E3-gBJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Products" storyboardName="Products" id="CHK-Nr-WDE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="apg-Ib-yER"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urw-lw-paD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="-101"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="3Wk-Xj-9VB">
+            <objects>
+                <navigationController id="LyP-N8-CJM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="cardIcon.png" id="1NE-x1-9iC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TXK-EQ-QPP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="s1L-zC-S9q" kind="relationship" relationship="rootViewController" id="Hqj-Zm-Vcj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tN-ob-5Um" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="618"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="Pzd-c8-EoK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" id="s1L-zC-S9q" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Ry-di-ygy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eT4-RM-bYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="617"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardIcon.png" width="27.5" height="23.5"/>
+        <image name="shoppingIcon.png" width="19" height="22"/>
+    </resources>
+</document>
