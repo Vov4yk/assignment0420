@@ -47,7 +47,9 @@ class CartRepository: Repository {
     
     //MARK: - CartRepositoryProtocol
     public func getAllProducts() -> [CartProduct] {
-        return storage.get()!.products
+        return storage.get()!.products.sorted { (a, b) -> Bool in
+            a.product.name < b.product.name
+        }
     }
     
     public func increase(product: Product) {
