@@ -50,9 +50,11 @@ No additional instalation needed. It's treated as production release. Therefore 
    - Cover ViewControllers
    - Run to 100% coverage
  - UI
+   - Optimistic UI features
    - Empty states
    - Prodgress indication
    - Pull to Refresh
+   - Error handling
  
 ### Spent
   - developmention ~13h
